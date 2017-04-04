@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Beginnings</title>
+		<title>Message</title>
 	</head>
 	
 	<body>
 	
 		<h3>Message: </h3>
-		<div></div>
+		<div>Click button for today's message.
+			<button id="mssgBtn">Message</button>
+		</div>
+		<div id="mssgTextContainer"></div>
 
 	<script>
 		//insert console log message into div
-		console.log('start somewhere');
+		var mssgText = 'start somewhere';
+		var mssgBtn = document.getElementById('mssgBtn');
+		var mssgContainer = document.getElementById('mssgTextContainer');
+		
+		mssgBtn.addEventListener('click', function() {
+			//when button clicked add mssg text to div
+			var mssgTextNode = document.createTextNode(mssgText);
+			mssgTextContainer.appendChild(mssgTextNode);
+		});
 	</script>
 
 	</body>
