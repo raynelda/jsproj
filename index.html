@@ -13,15 +13,20 @@
 		<div id="mssgTextContainer"></div>
 
 	<script>
-		//insert console log message into div
-		var mssgText = 'start somewhere';
+		// part 2, make mssgText 'next' array item
+		var quoteArr = ['just do it', 'do unto others'];
+		var mssgText;
 		var mssgBtn = document.getElementById('mssgBtn');
 		var mssgContainer = document.getElementById('mssgTextContainer');
 		
 		mssgBtn.addEventListener('click', function() {
-			//when button clicked add mssg text to div
+			//when button clicked add mssgText to div
+			
+			for(var i=0; i<quoteArr.length; i++) {
+			mssgText = quoteArr[i];
 			var mssgTextNode = document.createTextNode(mssgText);
 			mssgTextContainer.appendChild(mssgTextNode);
+			}
 		});
 	</script>
 
